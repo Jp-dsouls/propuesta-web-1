@@ -1,5 +1,20 @@
 ---
 const { type, title, context, date } = Astro.props;
+
+ const truncateText = (text: string, maxLength: number | undefined) => {
+  if (typeof text !== 'string') {
+    throw new Error('text must be a string');
+  }
+  if (typeof maxLength !== 'number') {
+    throw new Error('maxLength must be a number');
+  }
+  if (text.length > maxLength) {
+    return text.substring(0, maxLength) + '...';
+  }
+  return text;
+};
+
+const truncatedContext = truncateText(context, 120);
 ---
 
 <div class="product_card">
@@ -14,13 +29,12 @@ const { type, title, context, date } = Astro.props;
       />
     </a>
   </div>
-  <div class="product_info">
-    <h2 class="product_name">{title}</h2>
-    <p class="product_description">
-      {context}
+  <div class="product_info grid grid-cols-1 grid-rows-3 gap-1">
+    <h3 class="product_name row-start-1 row-end-2 col-start-1 col-end-2 h-16">{title}</h3>
+    <p class="product_description text-pretty row-start-2 row-end-3 col-start-1 col-end-2">
+      {truncatedContext}
     </p>
-
-    <div class="date">
+    <div class="date items-end row-start-3 row-end-4 col-start-1 col-end-2 text-right">
       <span class="date">{date}</span>
     </div>
   </div>
@@ -29,7 +43,7 @@ const { type, title, context, date } = Astro.props;
 <style>
   .product_card {
     width: 300px;
-    height: 400px;
+    height: 380px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -48,7 +62,7 @@ const { type, title, context, date } = Astro.props;
   }
 
   .product_card .product_info {
-    padding: 10px;
+    padding: 12px;
     font:
       14px "Poppins",
       sans-serif;
@@ -84,7 +98,6 @@ const { type, title, context, date } = Astro.props;
   .product_description {
     font-size: 14px;
     color: #292828;
-    margin-top: 5px;
   }
   .typeArticle {
     background-color: #8265c2;
