@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar/Navbar.astro';
 import BreadCrumbs from '../components/BreadCrumbs.astro';
 import Baner from '../components/Baner.astro';
 import OurOffer from '../components/OurOffer/OurOffer.astro';
@@ -9,10 +8,8 @@ import Directory from '../components/Directory/Directory.astro';
 import FinancialInformation from '../components/FinancialInformation/FinancialInformation.astro';
 import Services from '../components/Services/Services.astro';
 import FloatingBtn from '../components/FloatingBtn.astro';
-import Footer from '../components/Footer.astro';
 ---
 <Layout title="Nosotros - Anka Safi">
-  <Navbar/>
   <Baner src="/images/bg.jpeg" alt="reel" text="Diseña tu futuro financiero" textColor="con nosotros"/>
 	<BreadCrumbs/>
 	<OurOffer/>
@@ -21,5 +18,4 @@ import Footer from '../components/Footer.astro';
   <Directory/>
   <FinancialInformation/>
   <FloatingBtn/>
-	<Footer/>
 </Layout>
