@@ -1,0 +1,56 @@
+<section class="container mx-auto mt-12 bg-muted py-12 md:py-16 lg:py-20">
+
+    <div class="grid gap-6 md:grid-cols-2 md:items-center">
+      <div class="space-y-4">
+        <div class="flex text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#8265c2]">
+          <span>S/</span>
+          <p class="counter"> 124 </p>
+          <span>MM+</span>
+        </div>
+        <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">colocados en Factura negociable</h2>
+        <p class="md:text-xl/relaxed leading-7 text-[#848484]">+3MM administrados en fondos públicos</p>
+      </div>
+      <div class="flex justify-end">
+        <a
+          href="#"
+          class="inline-flex h-10 items-center justify-center rounded-md bg-[#8265c2] px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-[#8265c2]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white"
+        >Quieres saber más de nuestros fondos?</a>
+      </div>
+    </div>
+</section>
+ 
+<style>
+
+.wrapper > * {
+  padding: 100px;
+}
+
+</style>
+
+<script>
+  // counter run only once when visible in screen
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          let endValue = parseFloat(counter.textContent || "0");
+          let startValue = 0;
+          let updating = setInterval(() => {
+            startValue += endValue / 200;
+            counter.textContent = startValue.toFixed(0);
+            if (startValue > endValue) {
+              counter.textContent = endValue.toString();
+              clearInterval(updating);
+              observer.unobserve(counter);
+            }
+          }, 10);
+        }
+      });
+    },
+    { threshold: 1 }
+  );
+  document
+    .querySelectorAll(".counter")
+    .forEach((counter) => observer.observe(counter));
+</script>

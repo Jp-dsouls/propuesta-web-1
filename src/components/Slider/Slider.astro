@@ -1,0 +1,69 @@
+---
+import SlideItem from "./SlideItem.astro";
+---
+
+<section class="swiper mySwiper" style="height: 100vh;">
+  <div class="swiper-wrapper">
+    <SlideItem src="/images/bg.jpeg" alt="reel" text="Diseña tu futuro financiero" textColor="con nosotros"/>
+    <SlideItem src="/images/AnkaSafi-BG.jpeg" alt="reel" text="Avanza hacia tu futuro financiero" textColor="con libertad"/>
+    <SlideItem src="/images/familia-anka.jpeg" alt="reel" text="Gana rentabilidad" textColor="con inversiones inteligentes"/>
+    <SlideItem src="/images/contacto-anka-safi.jpeg" alt="reel" text="Te guiamos en el camino" textColor="hacia un mejor futuro financiero"/>
+  </div>
+  <div class="swiper-scrollbar z-50"></div>
+</section>
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+  }
+
+  @media screen and (min-width: 1054px) {
+    .title-slide {
+      padding-right: 10%;
+    }
+    #cover-swiper .swiper-pagination {
+      left: 92.5% !important;
+      bottom: 50% !important;
+      width: 50px;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    #cover-swiper .swiper-pagination span {
+      margin: 5px;
+    }
+  }
+</style>
+
+<script>
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+    pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  });
+</script>

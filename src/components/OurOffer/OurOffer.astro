@@ -1,0 +1,189 @@
+---
+import Title from "../Title/Title.astro";
+---
+
+<section class="container mx-auto flex flex-col my-8">
+  <Title title="Que ofrecemos" />
+  <h3 class="text-lg font-semibold -mt-3 ">
+    Diseñamos tu futuro financiero con inversiones de impacto y rentabilidades atractivas.
+  </h3>
+  <div class="tabs">
+    <header class="tab-buttons">
+      <button class="tab-button" data-tab="1">
+        <span class="line"></span>
+        <span class="font-bold text-2xl">Mision</span>
+      </button>
+      <button class="tab-button" data-tab="2">
+        <span class="line"></span>
+        <span class="font-bold text-2xl">Vision</span>
+      </button>
+    </header>
+    <div class="tab-contents">
+      <div class="tab-content flex flex-shrink" data-tab="1">
+        <img class="w-12 h-12 mr-2 my-auto" src="/icons/mision.png" alt="">
+        <div>
+          <h2 class="font-bold"> Nuestra misión</h2>
+          <p class="mb-5 leading-7 text-[#848484]">
+            Democratizar el acceso a vehículos de inversión sostenibles y
+            escalables para todos los inversionistas, con el fin de impulsar el
+            desarrollo del Perú y Latinoamérica, buscando el máximo beneficio
+            para todos nuestros grupos de interés.
+          </p>
+        </div>
+      </div>
+      <div class="tab-content flex flex-shrink" data-tab="2">
+        <img class="w-12 h-12 mr-2 my-auto" src="/icons/vision.png" alt="">
+        <div>
+          <h2 class="font-bold"> Vision</h2>
+          <p class="mb-5 leading-7 text-[#848484]">
+            Convertirnos en el líder en administración de fondos en Perú,
+            expandiendo nuestro impacto en Latinoamérica, impulsando el éxito
+            financiero de nuestros inversionistas y generando valor a largo
+            plazo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  .tabs {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+  }
+
+  .tab-button {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+    text-transform: uppercase;
+  }
+
+  .tab-button.active {
+    color: #e2e8f0;
+  }
+
+  .tab-button.active .line {
+    width: 4rem;
+    background-color: #e2e8f0;
+  }
+
+  .tab-button span:not(.line) {
+    line-height: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .line {
+    height: 1px;
+    width: 2rem;
+    background-color: #64748b;
+    display: block;
+    transition: all 140ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tab-contents {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .tab-content {
+    transition: all 140ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateY(20px);
+  }
+
+  .tab-content.active {
+    opacity: 1;
+    gap: 1rem;
+    max-height: fit-content;
+    transform: translateY(0px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+    }
+
+    .tab-buttons {
+      width: 100%;
+      height: auto;
+      background-color: rgba(1, 4, 9, 0.75);
+      backdrop-filter: blur(8px);
+    }
+
+    .tab-contents {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+  const tabButtonsContainer = document.querySelector(".tab-buttons");
+
+  // Comprueba si los elementos existen antes de proceder
+  if (tabButtons && tabContents && tabButtonsContainer) {
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", function (this: HTMLElement) {
+        // Anotación de tipo para `this`
+        const tab = this.getAttribute("data-tab");
+
+        // Comprueba si `tab` no es null antes de continuar
+        if (tab) {
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          this.classList.add("active");
+          const activeTabContent = document.querySelector(
+            `.tab-content[data-tab="${tab}"]`
+          );
+
+          // Comprueba si el contenido de la pestaña activa existe
+          if (activeTabContent) {
+            activeTabContent.classList.add("active");
+          }
+
+          const tabContentsContainer = document.querySelector(".tab-contents");
+          // Comprueba si el contenedor de contenidos de pestañas existe
+          if (tabContentsContainer) {
+            tabContentsContainer.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }
+      });
+    });
+
+    // Activa la primera pestaña y su contenido de forma predeterminada
+    if (tabButtons[0]) {
+      tabButtons[0].classList.add("active");
+    }
+    if (tabContents[0]) {
+      tabContents[0].classList.add("active");
+    }
+  }
+</script>

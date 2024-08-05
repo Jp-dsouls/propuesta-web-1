@@ -1,0 +1,181 @@
+---
+import Title from "../Title/Title.astro";
+---
+
+<section class="container mx-auto flex flex-col my-8">
+  <Title title="Inversiones" />
+  <h2 class="text-lg font-semibold">
+    Yaku Fondo de Inversión Factoring, Confirming y Descuento
+    <button
+      type="button"
+      class="py-3 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-white hover:bg-slate-400 focus:outline-none disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" id="modal-button">
+      <img src="/icons/info.png" alt="" />
+    </button>
+  </h2>
+  <!-- MODAL -->
+  <div id="hs-scale-animation-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <ul class="list-decimal p-8">
+        <li>Proyección de rendimiento del Fondo a un año. El valor cuota del Fondo es determinado por las condiciones de la oferta y demanda, dicho valor es variable debido a las expectativas de las inversiones y los cambios en las condiciones del mercado. La rentabilidad o ganancia obtenida en el pasado por el Fondo, no garantiza que ella se repita en el futuro. Las proyecciones que se realicen sobre las rentabilidades del Fondo tampoco garantizan que éstas se logren en el futuro. Anka no ofrece pagar intereses, ni garantiza una tasa fija de rendimiento sobre la inversión en el Fondo. Anka gestiona las inversiones del Fondo por cuenta y riesgo de los propios inversionistas.</li>
+        <li>Puedes revisar los riesgos relacionados a factores internos y externos al Fondo que podrían afectar los resultados de la inversión en el Fondo en el Reglamento de Participación del Fondo.</li>
+        <li>La supervisión de la SMVN no implica que ésta recomiende o garantice la inversión efectuada en un Fondo de Inversión.</li>
+      </ul>
+      <p>La información contenida en la presente publicidad debe ser complementada con la del Reglamento de Participación del Fondo.</p>
+    </div>
+  </div>
+
+  <div class="text-foreground">
+    <div class="overflow-x-auto">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="bg-muted">
+            <th class="px-4 py-3 font-medium"></th>
+            <th class="px-4 py-3 font-medium">
+              <span>Fondo Soles</span>
+              <h5 class="text-[#a186dc] text-2xl font-bold">PEN</h5>
+            </th>
+            <th class="px-4 py-3 font-medium">
+              <span>Fondo Dolares</span>
+              <h5 class="text-[#a186dc] text-2xl font-bold">USD</h5>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/inscripcion.png" alt="" class="pr-3" />
+              Inscripcion en el Registro Público del Mercado de Valores
+            </td>
+            <td class="px-4 py-3">✔</td>
+            <td class="px-4 py-3">✔</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/ley.png" alt="" class="pr-3" />
+              Resolucion que lo respalda</td
+            >
+            <td class="px-4 py-3">Resolución N° 144-2022-SMV/10.2</td>
+            <td class="px-4 py-3">Resolución N° 143-2022-SMV/10.2</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/dinero.png" alt="" class="pr-3" />
+              Monto
+            </td>
+            <td class="px-4 py-3">Hasta S/ 100,000,000.00</td>
+            <td class="px-4 py-3">Hasta $100,000,000.00</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/calendario.png" alt="" class="pr-3" />
+              Plazo
+            </td>
+            <td class="px-4 py-3">indeterminado</td>
+            <td class="px-4 py-3">indeterminado</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/inversion.png" alt="" class="pr-3" />
+              Monto de inversión sugerido
+            </td>
+            <td class="px-4 py-3">S/ 5000.00</td>
+            <td class="px-4 py-3">$5000.00</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/comision.png" alt="" class="pr-3" />
+              Comisión de administración</td
+            >
+            <td class="px-4 py-3">2% anual</td>
+            <td class="px-4 py-3">2% anual</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium inline-flex">
+              <img src="/icons/reglamento.png" alt="" class="pr-3" />
+              Reglamento de participacion</td
+            >
+            <td class="px-4 py-3">
+              <a
+                href="https://ankasafi.pe/wp-content/uploads/2023/03/Reglamento-de-Participacion-YAKU-SOLES.pdf"
+                target="_blank"
+              >
+                <img src="/icons/entrar.png" alt="" class="w-7" />
+              </a>
+            </td>
+            <td class="px-4 py-3">
+              <a
+                href="https://ankasafi.pe/wp-content/uploads/2023/03/Reglamento-de-Participacion-YAKU-DOLARES.pdf"
+                target="_blank"
+              >
+                <img src="/icons/entrar.png" alt="" class="w-7" />
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 25px;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("hs-scale-animation-modal") as HTMLElement | null;
+    const btn = document.getElementById("modal-button") as HTMLButtonElement | null;
+    const span = document.getElementsByClassName("close")[0] as HTMLElement | null;
+    if (modal && btn && span) {
+        btn.onclick = function() {
+            modal.style.display = "block";
+        };
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+        window.onclick = function(event: MouseEvent) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    } else {
+        console.error("Modal elements not found in the DOM.");
+    }
+});
+</script>

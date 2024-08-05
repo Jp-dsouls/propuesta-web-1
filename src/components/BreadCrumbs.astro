@@ -1,0 +1,59 @@
+<nav class="container mx-auto my-0">
+  <!-- Navigation -->
+  <ul role="navigation" class="section-breadcrumbs pb-3 leading-7 text-[#848484] font-semibold">
+    <li class="breadcrumbs-item">
+      <a href="/" aria-label="Inicio"><span class="capitalize">Inicio</span></a>
+    </li>
+    <li class="px-2">></li>
+    <li class="breadcrumbs-item">
+      <a href="#" aria-label="Institucional" class=""
+        ><span class="slug capitalize"></span></a
+      >
+    </li>
+  </ul>
+</nav>
+<style>
+  .section-breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-top: 20px;
+  }
+  .breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    flex-direction: column;
+  }
+  .breadcrumbs a {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all ease-in-out 0.15s;
+  }
+</style>
+<script>
+  var url = window.location.href;
+  var urlObj = new URL(url);
+  var pathname = urlObj.pathname;
+  var slug = pathname.split("/").filter(Boolean).pop() || "";
+
+  // console.log(slug);
+  var slugElement = document.querySelector(".slug");
+  var slugContainer = document.querySelector(".section-breadcrumbs");
+
+  if (slug === "") {
+    if (slugContainer) {
+      (slugContainer as HTMLElement).style.display = "none";
+    }
+  } else {
+    if (slugElement) {
+      slugElement.textContent = slug;
+    } else {
+      console.error('El elemento con la clase "slug" no se encontró.');
+    }
+  }
+</script>

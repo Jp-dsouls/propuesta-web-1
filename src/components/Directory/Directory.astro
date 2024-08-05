@@ -1,0 +1,22 @@
+---
+import Title from "../Title/Title.astro";
+import DirectoryCard from "./DirectoryCard.astro";
+---
+
+<section class="container mx-auto my-8">
+  <Title title="Directorio" />
+  <div class="directory">
+    <DirectoryCard src="/directory/joel-villanueva.jpeg" posicion="CEO y Director" nombre="Joel Villanueva" ref="https://www.linkedin.com/in/joelvt/"/>
+    <DirectoryCard src="/directory/joel-villanueva.jpeg" posicion="Presindete del directorio" nombre="Gonzalo Murguia" ref="#"/>
+    <DirectoryCard src="/directory/joel-villanueva.jpeg" posicion="Director Independiente" nombre="Javier Moran" ref="#"/>
+  </div>
+</section>
+
+<style>
+    .directory {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+  }
+</style>
