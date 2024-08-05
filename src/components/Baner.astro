@@ -1,0 +1,63 @@
+---
+const { src, alt, text, textColor } = Astro.props;
+---
+
+<div class="swiper-slide swiper-cover-item">
+  <img draggable="false" src={src} alt={alt} />
+  <div class="app-content-slide text-white">
+    <div class="container mx-auto flex flex-col flex-nowrap items-start">
+      <h3
+        class="title-slide text-white text-4xl text-left mb-5 font-bold uppercase"
+      >
+        {text}
+      </h3>
+      <span class="text-yellow-300 text-4xl text-left mb-6 font-bold uppercase"
+        >{textColor}</span
+      >
+    </div>
+  </div>
+</div>
+<style>
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-cover-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vw;
+    background: rgba(32, 32, 32, 0.404);
+  }
+  .swiper-cover-item {
+    width: 100%;
+    height: 30vw;
+  }
+  .swiper-cover-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+  }
+  .app-content-slide {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+  }
+</style>
