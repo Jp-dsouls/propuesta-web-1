@@ -4,17 +4,273 @@ import Title from "../components/Title/Title.astro";
 import Layout from "../layouts/Layout.astro";
 
 const { frontmatter } = Astro.props;
+const hasContent1 =
+  typeof frontmatter.content1 === "string" &&
+  frontmatter.content1.trim().length > 0;
+const hasContent2 =
+  typeof frontmatter.content2 === "string" &&
+  frontmatter.content2.trim().length > 0;
+const hasContent3 =
+  typeof frontmatter.content3 === "string" &&
+  frontmatter.content3.trim().length > 0;
+const hasContent4 =
+  typeof frontmatter.content4 === "string" &&
+  frontmatter.content4.trim().length > 0;
+const hasContent5 =
+  typeof frontmatter.content5 === "string" &&
+  frontmatter.content5.trim().length > 0;
+const hasContent6 =
+  typeof frontmatter.content6 === "string" &&
+  frontmatter.content6.trim().length > 0;
+const hasContent7 =
+  typeof frontmatter.content7 === "string" &&
+  frontmatter.content7.trim().length > 0;
+const hasContent8 =
+  typeof frontmatter.content8 === "string" &&
+  frontmatter.content8.trim().length > 0;
+const hasContent9 =
+  typeof frontmatter.content9 === "string" &&
+  frontmatter.content9.trim().length > 0;
+const hasContent10 =
+  typeof frontmatter.content10 === "string" &&
+  frontmatter.content10.trim().length > 0;
+const hasContent11 =
+  typeof frontmatter.content11 === "string" &&
+  frontmatter.content11.trim().length > 0;
+const hasContent12 =
+  typeof frontmatter.content12 === "string" &&
+  frontmatter.content12.trim().length > 0;
+const hasContent13 =
+  typeof frontmatter.content13 === "string" &&
+  frontmatter.content13.trim().length > 0;
+const hasContent14 =
+  typeof frontmatter.content14 === "string" &&
+  frontmatter.content14.trim().length > 0;
+const hasImage =
+  typeof frontmatter.srcImg === "string" &&
+  frontmatter.srcImg.trim().length > 0;
 ---
 
 <Layout title={frontmatter.title}>
-  <BanerBlog src={frontmatter.src} alt={frontmatter.alt} text={frontmatter.title}/>
+  <BanerBlog
+    src={frontmatter.src}
+    alt={frontmatter.alt}
+    text={frontmatter.title}
+  />
   <section class="container mx-auto flex flex-col my-8">
-    <Title title={frontmatter.subtitle1}/>
-    <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content1}</p>
-    <Title title={frontmatter.subtitle2}/>
-    <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content2}</p>
-    <img src={frontmatter.srcImg} alt={frontmatter.alt} class="h-[20vw] object-cover mb-7"/>
-    <Title title={frontmatter.subtitle3}/>
-    <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content3}</p>
+    {
+      hasContent1 && (
+        <>
+          <Title title={frontmatter.subtitle1} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content1}</p>
+        </>
+      )
+    }
+    {
+      hasContent2 && (
+        <>
+          <Title title={frontmatter.subtitle2} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content2}</p>
+        </>
+      )
+    }
+    {
+      hasImage && (
+        <img
+          src={frontmatter.srcImg}
+          alt={frontmatter.alt}
+          class="h-[20vw] object-cover mb-7"
+        />
+      )
+    }
+    {
+      hasContent3 && (
+        <>
+          <Title title={frontmatter.subtitle3} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content3}</p>
+        </>
+      )
+    }
+    {
+      frontmatter.ulListA ||
+      frontmatter.ali1 ||
+      frontmatter.ali2 ||
+      frontmatter.ali3 ||
+      frontmatter.ali4 ||
+      frontmatter.ali5 ||
+      frontmatter.ali6 ||
+      frontmatter.ali7 ? (
+        <ul class="list-disc leading-7 text-[#848484]">
+          {frontmatter.ulListA}
+          {frontmatter.ali1 && <li class="ml-5">{frontmatter.ali1}</li>}
+          {frontmatter.ali2 && <li class="ml-5">{frontmatter.ali2}</li>}
+          {frontmatter.ali3 && <li class="ml-5">{frontmatter.ali3}</li>}
+          {frontmatter.ali4 && <li class="ml-5">{frontmatter.ali4}</li>}
+          {frontmatter.ali5 && <li class="ml-5">{frontmatter.ali5}</li>}
+          {frontmatter.ali6 && <li class="ml-5">{frontmatter.ali6}</li>}
+          {frontmatter.ali7 && <li class="ml-5">{frontmatter.ali7}</li>}
+          {frontmatter.outListA}
+        </ul>
+      ) : null
+    }
+
+    {
+      hasContent4 && (
+        <>
+          <Title title={frontmatter.subtitle4} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content4}</p>
+        </>
+      )
+    }
+    {
+      hasContent5 && (
+        <>
+          <Title title={frontmatter.subtitle5} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content5}</p>
+        </>
+      )
+    }
+    {
+      hasContent6 && (
+        <>
+          <Title title={frontmatter.subtitle6} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content6}</p>
+        </>
+      )
+    }
+    {
+      hasContent7 && (
+        <>
+          <Title title={frontmatter.subtitle7} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content7}</p>
+        </>
+      )
+    }
+    {
+      hasContent8 && (
+        <>
+          <Title title={frontmatter.subtitle8} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content8}</p>
+        </>
+      )
+    }
+
+    {
+      frontmatter.ulListB ||
+      frontmatter.bli1 ||
+      frontmatter.bli2 ||
+      frontmatter.bli3 ||
+      frontmatter.bli4 ||
+      frontmatter.bli5 ||
+      frontmatter.bli6 ||
+      frontmatter.bli7 ? (
+        <ul class="list-disc leading-7 text-[#848484]">
+          {frontmatter.ulListB}
+          {frontmatter.bli1 && <li class="ml-5">{frontmatter.bli1}</li>}
+          {frontmatter.bli2 && <li class="ml-5">{frontmatter.bli2}</li>}
+          {frontmatter.bli3 && <li class="ml-5">{frontmatter.bli3}</li>}
+          {frontmatter.bli4 && <li class="ml-5">{frontmatter.bli4}</li>}
+          {frontmatter.bli5 && <li class="ml-5">{frontmatter.bli5}</li>}
+          {frontmatter.bli6 && <li class="ml-5">{frontmatter.bli6}</li>}
+          {frontmatter.bli7 && <li class="ml-5">{frontmatter.bli7}</li>}
+          {frontmatter.outListB}
+        </ul>
+      ) : null
+    }
+
+    {
+      hasContent9 && (
+        <>
+          <Title title={frontmatter.subtitle9} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content9}</p>
+        </>
+      )
+    }
+    {
+      hasContent10 && (
+        <>
+          <Title title={frontmatter.subtitle10} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content10}</p>
+        </>
+      )
+    }
+    {
+      hasContent11 && (
+        <>
+          <Title title={frontmatter.subtitle11} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content11}</p>
+        </>
+      )
+    }
+    {
+      hasContent12 && (
+        <>
+          <Title title={frontmatter.subtitle12} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content12}</p>
+        </>
+      )
+    }
+
+    {
+      frontmatter.ulListC ||
+      frontmatter.cli1 ||
+      frontmatter.cli2 ||
+      frontmatter.cli3 ||
+      frontmatter.cli4 ||
+      frontmatter.cli5 ||
+      frontmatter.cli6 ||
+      frontmatter.cli7 ? (
+        <ul class="list-disc leading-7 text-[#848484]">
+          {frontmatter.ulListC}
+          {frontmatter.cli1 && <li class="ml-5">{frontmatter.cli1}</li>}
+          {frontmatter.cli2 && <li class="ml-5">{frontmatter.cli2}</li>}
+          {frontmatter.cli3 && <li class="ml-5">{frontmatter.cli3}</li>}
+          {frontmatter.cli4 && <li class="ml-5">{frontmatter.cli4}</li>}
+          {frontmatter.cli5 && <li class="ml-5">{frontmatter.cli5}</li>}
+          {frontmatter.cli6 && <li class="ml-5">{frontmatter.cli6}</li>}
+          {frontmatter.cli7 && <li class="ml-5">{frontmatter.cli7}</li>}
+          {frontmatter.outListC}
+        </ul>
+      ) : null
+    }
+
+    {
+      hasContent13 && (
+        <>
+          <Title title={frontmatter.subtitle13} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content13}</p>
+        </>
+      )
+    }
+    {
+      hasContent14 && (
+        <>
+          <Title title={frontmatter.subtitle14} />
+          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content14}</p>
+        </>
+      )
+    }
+    {
+      frontmatter.ulListD ||
+      frontmatter.dli1 ||
+      frontmatter.dli2 ||
+      frontmatter.dli3 ||
+      frontmatter.dli4 ||
+      frontmatter.dli5 ||
+      frontmatter.dli6 ||
+      frontmatter.dli7 ? (
+        <ul class="list-disc leading-7 text-[#848484]">
+          {frontmatter.ulListD}
+          {frontmatter.dli1 && <li class="ml-5">{frontmatter.dli1}</li>}
+          {frontmatter.dli2 && <li class="ml-5">{frontmatter.dli2}</li>}
+          {frontmatter.dli3 && <li class="ml-5">{frontmatter.dli3}</li>}
+          {frontmatter.dli4 && <li class="ml-5">{frontmatter.dli4}</li>}
+          {frontmatter.dli5 && <li class="ml-5">{frontmatter.dli5}</li>}
+          {frontmatter.dli6 && <li class="ml-5">{frontmatter.dli6}</li>}
+          {frontmatter.dli7 && <li class="ml-5">{frontmatter.dli7}</li>}
+          {frontmatter.outListD}
+        </ul>
+      ) : null
+    }
   </section>
 </Layout>
