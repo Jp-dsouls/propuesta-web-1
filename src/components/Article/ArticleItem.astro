@@ -1,7 +1,9 @@
 ---
-const { type, title, context, date } = Astro.props;
+import { format, parseISO } from 'date-fns';
+import { es } from 'date-fns/locale';
+const postList = await Astro.glob("../../pages/blog/*.md");
 
- const truncateText = (text: string, maxLength: number | undefined) => {
+const truncateText = (text: string, maxLength: number | undefined) => {
   if (typeof text !== 'string') {
     throw new Error('text must be a string');
   }
@@ -14,36 +16,47 @@ const { type, title, context, date } = Astro.props;
   return text;
 };
 
-const truncatedContext = truncateText(context, 120);
+const formatDate = (dateString: string) => {
+  const date = parseISO(dateString);
+  return format(date, 'dd MMMM, yyyy', { locale: es });
+};
 ---
 
-<div class="product_card">
-  <div class="add_to_wishlist">
-    <span class="uppercase typeArticle">{type}</span>
-  </div>
-  <div class="image">
-    <a href="">
-      <img
-        src="https://i.rtings.com/assets/products/nggZcsC3/sony-wh-1000xm4-wireless/design-medium.jpg?format=auto"
-        alt=""
-      />
-    </a>
-  </div>
-  <div class="product_info grid grid-cols-1 grid-rows-3 gap-1">
-    <h3 class="product_name row-start-1 row-end-2 col-start-1 col-end-2 h-16">{title}</h3>
-    <p class="product_description text-pretty row-start-2 row-end-3 col-start-1 col-end-2">
-      {truncatedContext}
-    </p>
-    <div class="date items-end row-start-3 row-end-4 col-start-1 col-end-2 text-right">
-      <span class="date">{date}</span>
-    </div>
-  </div>
-</div>
+<section class="flex flex-wrap gap-5">
+  {
+    postList.map((post) => (
+      <div class="product_card">
+        <div class="add_to_wishlist">
+          <span class="uppercase typeArticle">{post.frontmatter.type}</span>
+        </div>
+        <div class="image">
+          <a href={post.url}>
+            <img
+              src="https://i.rtings.com/assets/products/nggZcsC3/sony-wh-1000xm4-wireless/design-medium.jpg?format=auto"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="product_info grid grid-cols-1 grid-rows-3 gap-2">
+          <h3 class="product_name row-start-1 row-end-2 col-start-1 col-end-2 text-[#8265c2]">
+            {post.frontmatter.title}
+          </h3>
+          <p class="product_description text-pretty row-start-2 row-end-3 col-start-1 col-end-2">
+            {truncateText(post.frontmatter.content, 120)}
+          </p>
+          <div class="date row-start-3 row-end-4 col-start-1 col-end-2 text-right">
+            <span class="date">{formatDate(post.frontmatter.pubDate)}</span>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>
 
 <style>
   .product_card {
     width: 300px;
-    height: 380px;
+    height: 390px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

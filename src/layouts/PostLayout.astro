@@ -1,0 +1,20 @@
+---
+import BanerBlog from "../components/baner/BanerBlog.astro";
+import Title from "../components/Title/Title.astro";
+import Layout from "../layouts/Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <BanerBlog src={frontmatter.src} alt={frontmatter.alt} text={frontmatter.title}/>
+  <section class="container mx-auto flex flex-col my-8">
+    <Title title={frontmatter.subtitle1}/>
+    <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content1}</p>
+    <Title title={frontmatter.subtitle2}/>
+    <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content2}</p>
+    <img src={frontmatter.srcImg} alt={frontmatter.alt} class="h-[20vw] object-cover mb-7"/>
+    <Title title={frontmatter.subtitle3}/>
+    <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content3}</p>
+  </section>
+</Layout>
