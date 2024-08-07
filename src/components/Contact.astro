@@ -1,10 +1,41 @@
 ---
+import { Image } from "astro:assets";
 import Title from "./Title/Title.astro";
 ---
 
 <section class="container mx-auto flex flex-col my-8">
   <Title title="Te acompañamos en todo el proceso" />
-  <h2 class="text-lg font-semibold">
+  <h3
+    class="shadow-text relative block leading-3 color-[#222222] pb-4 text-3xl"
+  >
     Nuestros especialistas te ayudarán a encontrar la mejor alternativa para ti
-  </h2>
+  </h3>
+  <main class="">
+    <h4 class="text-[#8265c2] font-semibold mt-5">
+      Agenda una cita con nuestros especialistas
+    </h4>
+    <p class="mt-1">Llámanos de lunes a viernes de 9:00 a 17:00. O escríbenos</p>
+    <div class="flex gap-3 mt-2">
+      <Image
+        src="/icons/telefono.png"
+        alt="Logo telefono"
+        width="30"
+        height="35"
+        draggable="false"
+        loading="eager"
+      />
+      <span> 965 717 315 </span>
+    </div>
+    <div class="flex gap-3 mt-2">
+      <Image
+        src="/icons/correo.png"
+        alt="Logo correo"
+        width="30"
+        height="35"
+        draggable="false"
+        loading="eager"
+      />
+      <span> contacto@ankasafi.com </span>
+    </div>
+  </main>
 </section>

@@ -31,7 +31,7 @@ const formatDate = (dateString: string) => {
           <span class="uppercase typeArticle">{post.frontmatter.type}</span>
         </div>
         <div class="image">
-          <a href={post.url}>
+          <a href={post.url} draggable="false">
             <Image
             src={post.frontmatter.src}
             alt="imagen de blog"
