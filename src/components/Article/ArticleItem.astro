@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { format, parseISO } from 'date-fns';
 import { es } from 'date-fns/locale';
 const postList = await Astro.glob("../../pages/blog/*.md");
@@ -31,10 +32,15 @@ const formatDate = (dateString: string) => {
         </div>
         <div class="image">
           <a href={post.url}>
-            <img
-              src={post.frontmatter.src}
-              alt=""
-            />
+            <Image
+            src={post.frontmatter.src}
+            alt="imagen de blog"
+            width="24"
+            height="24"
+            draggable="false"
+            loading="lazy"
+            class="w-full h-[200px] object-cover rounded-t-[16px]"
+          />
           </a>
         </div>
         <div class="product_info grid grid-cols-1 grid-rows-3 gap-2">

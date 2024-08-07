@@ -1,22 +1,30 @@
 ---
+import { Image } from "astro:assets";
 const { src, posicion, nombre, ref } = Astro.props;
 ---
+
 <div class="banner_wrapper">
   <div class="banner">
-    <img
-    draggable="false"
-    src={src}
-    alt=`imagen de - ${nombre}`
-    class="banner__image"
+    <Image
+      src={src}
+      alt=`imagen de - ${nombre}`
+      width="44"
+      height="48"
+      draggable="false"
+      loading="eager"
+      class="banner__image"
     />
   </div>
   <div class="card__wrapper">
     <div class="card">
       <div class="card__info">
-        <img
-          draggable="false"
+        <Image
           src={src}
           alt=`imagen de - ${nombre}`
+          width="44"
+          height="48"
+          draggable="false"
+          loading="eager"
           class="card__avatar"
         />
         <div>
@@ -136,5 +144,4 @@ const { src, posicion, nombre, ref } = Astro.props;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
   }
-
 </style>

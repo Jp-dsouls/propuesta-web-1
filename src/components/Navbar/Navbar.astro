@@ -2,18 +2,13 @@
 
 import BtnExpert from "../Btn/BtnExpert.astro";
 import NavItem from "./NavItem.astro";
+import { Image } from 'astro:assets';
 ---
 
 <div class=" fixed left-0 top-0 right-0 z-[900]">
   <div class="container relative z-10 flex justify-between items-center mx-auto py-8">
     <a href="/" class="logo-wrap relative float-left no-underline text-[#333333] self-center" draggable="false">
-      <img
-        src="https://ankasafi.pe/wp-content/uploads/2023/09/Anka-Safi-Logo.png"
-        alt="Logo Anka"
-        draggable="false"
-        loading="lazy"
-        class="w-28"
-      />
+      <Image src="https://ankasafi.pe/wp-content/uploads/2023/09/Anka-Safi-Logo.png" alt="Logo de Anka Safi" width="112" height="50" draggable="false" loading="lazy"/>
     </a>
     <nav role="navigation" class="navigation relative float-right flex text-base">
       <div class="flex hidden lg:flex lg:gap-10 md:hidden sm:hidden">

@@ -1,6 +1,7 @@
 ---
 import Title from "../Title/Title.astro";
 import ServicesItem from "./ServicesItem.astro";
+import { Image } from "astro:assets";
 ---
 
 <section class="container mx-auto flex flex-col my-8">
@@ -12,31 +13,71 @@ import ServicesItem from "./ServicesItem.astro";
           title="Integridad y seguridad"
           context="Actuamos siempre con honestidad y transparencia en todas nuestras operaciones."
         >
-        <img class="w-11 mr-2" src="/icons/candado.png" alt="">
+          <Image
+            src="/icons/candado.png"
+            alt="icono candado"
+            width="44"
+            height="48"
+            draggable="false"
+            loading="eager"
+            class="w-11 mr-2"
+          />
         </ServicesItem>
         <ServicesItem
           title="Excelencia"
           context=" Buscamos la calidad en todos los aspectos de la gestión de activos y la administración de fondos."
         >
-          <img class="w-11 mr-2" src="/icons/excelencia.png" alt="">
+          <Image
+            src="/icons/excelencia.png"
+            alt="icono excelencia"
+            width="44"
+            height="48"
+            draggable="false"
+            loading="eager"
+            class="w-11 mr-2"
+          />
         </ServicesItem>
         <ServicesItem
           title="Confianza"
           context="Construimos y mantenemos relaciones de confianza sólidas con nuestros inversionistas y socios."
         >
-          <img class="w-11 mr-2" src="/icons/apreton.png" alt="">
+          <Image
+            src="/icons/apreton.png"
+            alt="icono apreton"
+            width="44"
+            height="48"
+            draggable="false"
+            loading="eager"
+            class="w-11 mr-2"
+          />
         </ServicesItem>
         <ServicesItem
           title="Inclusión financiera"
           context="Democratizamos el acceso a las inversiones y al financiamiento a través de propuestas innovadoras, apalancadas en la tecnología y la innovación."
         >
-        <img class="w-11 mr-2" src="/icons/proteger.png" alt="">
+          <Image
+            src="/icons/proteger.png"
+            alt="icono proteger"
+            width="44"
+            height="48"
+            draggable="false"
+            loading="eager"
+            class="w-11 mr-2"
+          />
         </ServicesItem>
         <ServicesItem
           title="Sostenibilidad"
           context="Promovemos prácticas financieras sostenibles y responsables en beneficio a largo plazo de los inversionistas y el ambiente."
         >
-        <img class="w-11 mr-2" src="/icons/sostenibilidad.png" alt="">
+          <Image
+            src="/icons/sostenibilidad.png"
+            alt="icono sostenibilidad"
+            width="44"
+            height="48"
+            draggable="false"
+            loading="eager"
+            class="w-11 mr-2"
+          />
         </ServicesItem>
       </div>
     </div>

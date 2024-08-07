@@ -1,5 +1,6 @@
 ---
 import Title from "../Title/Title.astro";
+import { Image } from "astro:assets";
 ---
 
 <section class="container mx-auto flex flex-col my-8">
@@ -9,7 +10,14 @@ import Title from "../Title/Title.astro";
     <button
       type="button"
       class="py-3 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-white hover:bg-slate-400 focus:outline-none disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-scale-animation-modal" id="modal-button">
-      <img src="/icons/info.png" alt="" />
+      <Image
+            src="/icons/info.png"
+            alt="icono info"
+            width="24"
+            height="24"
+            draggable="false"
+            loading="lazy"
+          />
     </button>
   </h2>
   <!-- MODAL -->
@@ -44,7 +52,15 @@ import Title from "../Title/Title.astro";
         <tbody>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/inscripcion.png" alt="" class="pr-3" />
+              <Image
+            src="/icons/inscripcion.png"
+            alt="icono inscripcion"
+            width="38"
+            height="24"
+            draggable="false"
+            loading="lazy"
+            class="pr-3"
+          />
               Inscripcion en el Registro Público del Mercado de Valores
             </td>
             <td class="px-4 py-3">✔</td>
@@ -52,7 +68,15 @@ import Title from "../Title/Title.astro";
           </tr>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/ley.png" alt="" class="pr-3" />
+              <Image
+            src="/icons/ley.png"
+            alt="icono ley"
+            width="35"
+            height="24"
+            draggable="false"
+            loading="lazy"
+            class="pr-3"
+          />
               Resolucion que lo respalda</td
             >
             <td class="px-4 py-3">Resolución N° 144-2022-SMV/10.2</td>
@@ -60,7 +84,15 @@ import Title from "../Title/Title.astro";
           </tr>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/dinero.png" alt="" class="pr-3" />
+              <Image
+            src="/icons/dinero.png"
+            alt="icono dinero"
+            width="35"
+            height="24"
+            draggable="false"
+            loading="lazy"
+            class="pr-3"
+          />
               Monto
             </td>
             <td class="px-4 py-3">Hasta S/ 100,000,000.00</td>
@@ -68,7 +100,16 @@ import Title from "../Title/Title.astro";
           </tr>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/calendario.png" alt="" class="pr-3" />
+              <Image
+              src="/icons/calendario.png"
+              alt="icono calendario"
+              width="32"
+              height="22"
+              draggable="false"
+              loading="lazy"
+              class="pr-3"
+            />
+
               Plazo
             </td>
             <td class="px-4 py-3">indeterminado</td>
@@ -76,7 +117,15 @@ import Title from "../Title/Title.astro";
           </tr>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/inversion.png" alt="" class="pr-3" />
+              <Image
+              src="/icons/inversion.png"
+              alt="icono inversion"
+              width="32"
+              height="24"
+              draggable="false"
+              loading="lazy"
+              class="pr-3"
+            />
               Monto de inversión sugerido
             </td>
             <td class="px-4 py-3">S/ 5000.00</td>
@@ -84,7 +133,15 @@ import Title from "../Title/Title.astro";
           </tr>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/comision.png" alt="" class="pr-3" />
+              <Image
+              src="/icons/comision.png"
+              alt="icono comision"
+              width="34"
+              height="24"
+              draggable="false"
+              loading="lazy"
+              class="pr-3"
+            />
               Comisión de administración</td
             >
             <td class="px-4 py-3">2% anual</td>
@@ -92,7 +149,15 @@ import Title from "../Title/Title.astro";
           </tr>
           <tr class="border-b">
             <td class="px-4 py-3 font-medium inline-flex">
-              <img src="/icons/reglamento.png" alt="" class="pr-3" />
+              <Image
+              src="/icons/reglamento.png"
+              alt="icono reglamento"
+              width="38"
+              height="24"
+              draggable="false"
+              loading="lazy"
+              class="pr-3"
+            />
               Reglamento de participacion</td
             >
             <td class="px-4 py-3">
@@ -100,7 +165,15 @@ import Title from "../Title/Title.astro";
                 href="https://ankasafi.pe/wp-content/uploads/2023/03/Reglamento-de-Participacion-YAKU-SOLES.pdf"
                 target="_blank"
               >
-                <img src="/icons/entrar.png" alt="" class="w-7" />
+              <Image
+              src="/icons/entrar.png"
+              alt="icono entrar"
+              width="35"
+              height="24"
+              draggable="false"
+              loading="lazy"
+              class="pr-3"
+            />
               </a>
             </td>
             <td class="px-4 py-3">
@@ -108,7 +181,15 @@ import Title from "../Title/Title.astro";
                 href="https://ankasafi.pe/wp-content/uploads/2023/03/Reglamento-de-Participacion-YAKU-DOLARES.pdf"
                 target="_blank"
               >
-                <img src="/icons/entrar.png" alt="" class="w-7" />
+              <Image
+              src="/icons/entrar.png"
+              alt="icono entrar"
+              width="35"
+              height="24"
+              draggable="false"
+              loading="lazy"
+              class="pr-3"
+            />
               </a>
             </td>
           </tr>

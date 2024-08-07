@@ -1,6 +1,6 @@
 ---
-import Counter from "./Counter.astro";
 import Title from "./Title/Title.astro";
+import { Image } from "astro:assets";
 ---
 
 <section class="container mx-auto">
@@ -10,12 +10,12 @@ import Title from "./Title/Title.astro";
         <div class="inner-column">
           <div class="mb-11">
             <Title title="Nuestra oferta" />
-            <h3
-              class="shadow-text relative block leading-3 color-[#222222] pb-4"
+            <h5
+              class="shadow-text relative block leading-3 color-[#222222] pb-4 text-3xl"
             >
               Diseñamos tu futuro financiero con inversiones que tienen impacto
               directo en la economía y rentabilidades atractivas
-            </h3>
+            </h5>
           </div>
           <p class="mb-5 leading-7 text-[#848484]">
             En Anka queremos democratizar el acceso a herramientas de inversión
@@ -29,8 +29,12 @@ import Title from "./Title/Title.astro";
             objetivos financieros.
           </p>
           <div class="btn-box relative">
-            <a href="/nosotros" class="uppercase py-4 px-14 relative inline-block leading-7 text-white overflow-hidden tracking-wide bg-[#a186dc]">
-              Conoce más</a>
+            <a
+              href="/nosotros"
+              class="uppercase py-4 px-14 relative inline-block leading-7 text-white overflow-hidden tracking-wide bg-[#a186dc]"
+            >
+              Conoce más</a
+            >
           </div>
         </div>
       </div>
@@ -39,10 +43,15 @@ import Title from "./Title/Title.astro";
       <div class="image-column order-1 relative">
         <div class="inner-column">
           <figure class="image-1">
-              <img
-                src="https://ankasafi.pe/wp-content/uploads/2022/08/bailando.jpeg"
-                alt=""
-                class="h-[600px] w-[60%]"/>
+            <Image
+              width="600"
+              height="580"
+              src="https://ankasafi.pe/wp-content/uploads/2022/08/bailando.jpeg"
+              alt="Imagen"
+              class="h-[580px] w-[65%]"
+              draggable="false"
+              loading="lazy"
+            />
           </figure>
         </div>
       </div>
@@ -58,7 +67,7 @@ import Title from "./Title/Title.astro";
 
   .about-section .image-column .inner-column {
     position: relative;
-    padding-left: 80px;
+    padding-left: 110px;
     padding-bottom: 0px;
   }
 
@@ -66,8 +75,8 @@ import Title from "./Title/Title.astro";
     content: "";
     position: absolute;
     width: calc(50% + 80px);
-    height: calc(100% + 160px);
-    top: -80px;
+    height: calc(100% + 100px);
+    top: -50px;
     left: -3px;
     background: transparent;
     z-index: 0;
@@ -82,5 +91,4 @@ import Title from "./Title/Title.astro";
     box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
     border-radius: 46px;
   }
-
 </style>

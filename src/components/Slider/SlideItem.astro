@@ -1,10 +1,11 @@
 ---
 import BtnExpert from "../Btn/BtnExpert.astro";
 const { src, alt, text, textColor } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <div class="swiper-slide swiper-cover-item">
-  <img draggable="false" src={src} alt={alt} />
+  <Image src={src} alt={alt} width="24" height="50" draggable="false" loading="eager"/>
   <div class="app-content-slide text-white">
     <div class="container mx-auto flex flex-col flex-nowrap items-start">
       <h1

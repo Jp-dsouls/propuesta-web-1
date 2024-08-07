@@ -1,4 +1,5 @@
 ---
+import FloatingBtn from '../components/FloatingBtn.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar/Navbar.astro';
 
@@ -23,6 +24,7 @@ const { title } = Astro.props;
   <body>
     <Navbar/>
     <slot />
+    <FloatingBtn/>
     <Footer/>
   </body>
 </html>
@@ -48,7 +50,6 @@ const { title } = Astro.props;
   .shadow-text {
     position: relative;
     display: block;
-    font-size: 40px;
     line-height: 1.28em;
     color: #222222;
     font-weight: 600;
