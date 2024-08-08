@@ -41,6 +41,8 @@
   var pathname = urlObj.pathname;
   var slug = pathname.split("/").filter(Boolean).pop() || "";
 
+  slug = slug.replace(/-/g, " ");
+
   // console.log(slug);
   var slugElement = document.querySelector(".slug");
   var slugContainer = document.querySelector(".section-breadcrumbs");

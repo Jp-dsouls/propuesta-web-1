@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BreadCrumbs from "../components/BreadCrumbs.astro";
+import Baner from "../components/baner/Baner.astro";
+import Title from "../components/Title/Title.astro";
+import Paragraph from "../components/Paragraph.astro";
+---
+
+<Layout title="Inversiones - Anka Safi">
+  <Baner
+    src="/images/bg.jpeg"
+    alt="reel"
+    text="Comprende las bases"
+    textColor="de tu seguridad financiera"
+  />
+  <BreadCrumbs />
+  <section class="container mx-auto">
+    <Title title="TÉRMINOS Y CONDICIONES" />
+    <Paragraph content="Al acceder o navegar en el presente Sitio Web, desarrollado y administrado por ANKA S.A.F.I. S.A. (en adelante, “ANKA SAFI”), el usuario acepta que ha leído los presentes Términos y Condiciones; y, por ende, declara que se encuentra de acuerdo con las condiciones descritas en esta sección."/>
+    <ul class="list-disc leading-7 text-[#848484] mb-5">
+      <li class="ml-5">(i) Cuando en el presente Sitio Web se haga referencia al termino: “Fondo de Oferta Pública”, se entenderá como un fondo de inversión administrado por ANKA SAFI cuyos certificados se colocan o se puedan negociar mediante oferta pública;</li>
+      <li class="ml-5">(ii) Cuando en el presente Sitio Web se haga referencia al termino: “Fondo de Oferta Privada”, se entenderá como un fondo de inversión gestionado por ANKA SAFI, cuyas cuotas no se encuentran inscritas en el Registro Público del Mercado de Valores; y,</li>
+      <li class="ml-5">(iii) La supervisión de la Superintendencia del Mercado de Valores (SMV) no implica que ésta última recomiende o garantice la inversión efectuada en un fondo de inversión. </li>
+    </ul>
+
+    <h3 class="font-semibold text-2xl">Protección de Datos Personales</h3>
+    <Paragraph content="El usuario del presente Sitio Web, al ingresar y/o proporcionar sus datos personales, declara que, de acuerdo a la Ley N° 29733 – Ley de Protección de Datos Personales, su Reglamento aprobado mediante Decreto Supremo N° 003-2013-JUS y las demás disposiciones complementarias, ha otorgado a ANKA SAFI consentimiento previo, expreso, inequívoco y libre para el tratamiento de los datos personales que han sido proporcionados. El término “tratamiento” tiene para estos efectos, el significado contenido en el numeral 17 del Artículo 2, de la Ley N° 29733, Ley de Protección de Datos Personales."/>
+    <Paragraph content="El usuario del presente Sitio Web declara que, el consentimiento al que ese hace referencia en el párrafo precedente es de manera libre, sin condicionamientos por parte de ANKA S.A.F.I., pudiendo revocar el mencionado consentimiento en cualquier momento, enviando una comunicación escrita a cualquiera de las oficinas de ANKA S.A.F.I. y/o un correo electrónico dirigido a la siguiente dirección: hola@ankasafi.com, indicando expresamente su nombre completo, número de documento de identidad e indicando expresamente el o los derechos que desea ejercer (Acceso, Rectificación, Cancelación y Oposición) o, de ser el caso, revocar el presente consentimiento."/>
+    <Paragraph content="En todo lo aquí no previsto, rigen las normas y disposiciones contenidas en la Ley N° 29733, Ley de Protección de Datos Personales y su Reglamento. "/>
+
+    <h3 class="font-semibold text-2xl">Propiedad Intelectual</h3>
+    <Paragraph content="El contenido del presente Sitio Web, incluyendo a modo de ejemplo y no limitativo los textos, datos, artículos, diseños, logotipos, marcas registradas, formularios, documentos, gráficos, fotos, imágenes, contenidos en general, su organización y compilación, códigos fuente, software, entre otros, y cualquier otra información contenida es de titularidad de ANKA SAFI y se encuentra protegido por las normas de propiedad intelectual y por los tratados internacionales vigentes en Perú en esta materia. En ese sentido, el usuario declara que comprende y acepta que el contenido del presente Sitio Web es de propiedad de ANKA SAFI; y, por ende, el uso del Sitio Web y los servicios prestados por ANKA SAFI no le otorga derecho alguno sobre las marcas registradas de titularidad de esta última ni sobre el Contenido del Sitio Web."/>
+
+    <h3 class="font-semibold text-2xl">Ley Aplicable y Solución de Controversias</h3>
+    <Paragraph content="Los presentes Términos y Condiciones se encuentran sujetos y regidos por las leyes vigentes en la República del Perú."/>
+    <Paragraph content="Cualquier conflicto o controversia surgida en relación con y/o a partir de los presentes Términos y Condiciones será sometida al conocimiento de los jueces y tribunales de la Corte Superior de Justicia de Lima, renunciando el usuario al fuero de su domicilio."/>
+
+  </section>
+</Layout>
