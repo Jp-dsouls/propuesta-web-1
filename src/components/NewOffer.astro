@@ -1,4 +1,5 @@
 ---
+import Paragraph from "./Paragraph.astro";
 import Title from "./Title/Title.astro";
 import { Image } from "astro:assets";
 ---
@@ -17,17 +18,8 @@ import { Image } from "astro:assets";
               directo en la economía y rentabilidades atractivas
             </h5>
           </div>
-          <p class="mb-5 leading-7 text-[#848484]">
-            En Anka queremos democratizar el acceso a herramientas de inversión
-            para impulsar el desarrollo y la inclusión financiera en Perú y
-            América Latina.
-          </p>
-          <p class="mb-5 leading-7 text-[#848484]">
-            Somos una Sociedad Administradora de Fondos de Inversión registrada
-            en la Superintendencia de Mercado de Valores (SMV), lo que nos
-            permite convertirnos en tu socio estratégico para que logres tus
-            objetivos financieros.
-          </p>
+          <Paragraph content="En Anka queremos democratizar el acceso a herramientas de inversión para impulsar el desarrollo y la inclusión financiera en Perú y América Latina."/>
+          <Paragraph content="Somos una Sociedad Administradora de Fondos de Inversión registrada en la Superintendencia de Mercado de Valores (SMV), lo que nos permite convertirnos en tu socio estratégico para que logres tus objetivos financieros."/>
           <div class="btn-box relative">
             <a
               href="/nosotros"
