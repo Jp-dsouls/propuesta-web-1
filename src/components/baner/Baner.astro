@@ -2,22 +2,27 @@
 const { src, alt, text, textColor } = Astro.props;
 ---
 
-<div class="swiper-slide swiper-cover-item">
+<div class="swiper-slide swiper-cover-item w-full h-[60vw] lg:md:sm:h-[30vw]">
   <img draggable="false" src={src} alt={alt} />
-  <div class="app-content-slide text-white">
-    <div class="container mx-auto flex flex-col flex-nowrap items-start">
-      <h3
-        class="title-slide text-white text-4xl text-left mb-5 font-bold uppercase"
+  <div class="app-content-slide w-full flex text-white absolute left-[50%] top-[20%] md:top-[50%] lg:md:sm:top-[38%]">
+    <div class="container mx-auto flex flex-col flex-nowrap items-start px-5 lg:md:sm:p-0">
+      <h1
+        class="title-slide text-white text-3xl text-left font-bold uppercase md:text-5xl lg:md:sm:text-7xl lg:md:sm:mb-5 "
       >
         {text}
-      </h3>
-      <span class="text-yellow-300 text-4xl text-left mb-6 font-bold uppercase"
+      </h1>
+      <span class="text-yellow-300 text-3xl text-left mb-6 font-bold uppercase md:text-5xl lg:md:sm:text-7xl"
         >{textColor}</span
       >
     </div>
   </div>
 </div>
 <style>
+    .app-content-slide {
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+  }
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -42,23 +47,11 @@ const { src, alt, text, textColor } = Astro.props;
     background: rgba(32, 32, 32, 0.404);
     z-index: -10;
   }
-  .swiper-cover-item {
-    width: 100%;
-    height: 30vw;
-  }
   .swiper-cover-item img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     object-position: center;
   }
-  .app-content-slide {
-    position: absolute;
-    width: 100%;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    display: flex;
-  }
+
 </style>
