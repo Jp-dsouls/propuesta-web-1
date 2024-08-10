@@ -5,34 +5,10 @@ import { Image } from "astro:assets";
 ---
 
 <section class="container mx-auto">
-  <div class="about-section relative">
-    <div class="grid grid-cols-2">
-      <div class="relative mb-12 order-2">
-        <div class="inner-column">
-          <div class="mb-11">
-            <Title title="Nuestra oferta" />
-            <h5
-              class="shadow-text relative block leading-3 color-[#222222] pb-4 text-3xl"
-            >
-              Diseñamos tu futuro financiero con inversiones que tienen impacto
-              directo en la economía y rentabilidades atractivas
-            </h5>
-          </div>
-          <Paragraph content="En Anka queremos democratizar el acceso a herramientas de inversión para impulsar el desarrollo y la inclusión financiera en Perú y América Latina."/>
-          <Paragraph content="Somos una Sociedad Administradora de Fondos de Inversión registrada en la Superintendencia de Mercado de Valores (SMV), lo que nos permite convertirnos en tu socio estratégico para que logres tus objetivos financieros."/>
-          <div class="btn-box relative">
-            <a
-              href="/nosotros"
-              class="uppercase py-4 px-14 relative inline-block leading-7 text-white overflow-hidden tracking-wide bg-[#a186dc]"
-            >
-              Conoce más</a
-            >
-          </div>
-        </div>
-      </div>
-
+  <div class="about-section relative pt-28 pr-14">
+    <div class="lg:md:sm:grid lg:md:sm:grid-cols-2">
       <!-- Image Column -->
-      <div class="image-column order-1 relative">
+      <div class="image-column relative hidden lg:md:sm:block">
         <div class="inner-column">
           <figure class="image-1">
             <Image
@@ -47,16 +23,39 @@ import { Image } from "astro:assets";
           </figure>
         </div>
       </div>
+
+      <div class="relative mb-12">
+        <div class="inner-column">
+          <div class="mb-11">
+            <Title title="Nuestra oferta" />
+            <h5
+              class="shadow-text relative block leading-3 color-[#222222] pb-4 text-3xl"
+            >
+              Diseñamos tu futuro financiero con inversiones que tienen impacto
+              directo en la economía y rentabilidades atractivas
+            </h5>
+          </div>
+          <Paragraph
+            content="En Anka queremos democratizar el acceso a herramientas de inversión para impulsar el desarrollo y la inclusión financiera en Perú y América Latina."
+          />
+          <Paragraph
+            content="Somos una Sociedad Administradora de Fondos de Inversión registrada en la Superintendencia de Mercado de Valores (SMV), lo que nos permite convertirnos en tu socio estratégico para que logres tus objetivos financieros."
+          />
+          <div class="btn-box relative">
+            <a
+              href="/nosotros"
+              class="uppercase py-4 px-14 relative inline-block leading-7 text-white overflow-hidden tracking-wide bg-[#a186dc]"
+            >
+              Conoce más</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .about-section {
-    position: relative;
-    padding: 120px 0 70px;
-  }
-
   .about-section .image-column .inner-column {
     position: relative;
     padding-left: 110px;
