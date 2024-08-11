@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 
 <div class="fixed left-0 top-0 right-0 z-10">
   <div
-    class="container relative flex justify-between items-center mx-auto py-8 px-5 lg:md:sm:px-0"
+    class="container relative flex justify-between items-center px-5 lg:md:sm:px-0"
   >
     <a
       href="/"
@@ -28,7 +28,7 @@ import { Image } from "astro:assets";
       role="navigation"
       class="navigation relative float-right flex text-base"
     >
-      <div class="flex hidden lg:flex lg:gap-10 md:hidden sm:hidden">
+      <div class="hidden lg:flex lg:gap-10 md:hidden sm:hidden">
         <NavItem item="Quienes somos" ref="/nosotros" />
         <NavItem item="Inversiones" ref="/inversiones" />
         <NavItem item="Blog" ref="/blog" />
@@ -37,15 +37,15 @@ import { Image } from "astro:assets";
         <BtnExpert />
       </div>
       <!-- drawer -->
-      <div class="lg:hidden md:block sm:block h-screen">
-        <div class="drawer-items flex hidden lg:flex md:hidden sm:hidden">
+      <div class="lg:md:sm:block">
+        <div class="drawer-items hidden lg:flex md:hidden sm:hidden">
           <NavItem item="Quienes somos" ref="/nosotros" />
           <NavItem item="Inversiones" ref="/inversiones" />
           <NavItem item="Blog" ref="/blog" />
           <NavItem item="Preguntas" ref="/preguntas" />
           <NavItem item="Contacto" ref="/contacto" />
         </div>
-        <main class="">
+        <main class="py-8">
           <aside class="drawer">
             <div class="ham">
               <div class="line upper-line"></div>
