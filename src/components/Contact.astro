@@ -4,9 +4,25 @@ import Title from "./Title/Title.astro";
 ---
 
 <section class="container mx-auto mb-8">
-  <div class="about-section relative">
-    <div class="grid grid-cols-2">
-      <div class="relative mb-12 order-2">
+  <div class="about-section relative px-5 pt-10 lg:md:sm:pt-28 pr-14">
+    <div class="lg:md:sm:grid lg:md:sm:grid-cols-2">
+      <!-- Image Column -->
+      <div class="image-column relative hidden lg:md:sm:block">
+        <div class="inner-column">
+          <figure class="image-1">
+            <Image
+              width="600"
+              height="580"
+              src="https://ankasafi.pe/wp-content/uploads/2022/08/Contacto-Anka-Safi-Form.jpeg"
+              alt="Imagen"
+              class="h-[480px] w-[65%] mr-2 my-auto "
+              draggable="false"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </div>
+      <div class="relative mb-12">
         <div class="inner-column">
           <div class="mb-11">
             <Title title="Te acompañamos en todo el proceso" />
@@ -59,31 +75,11 @@ import Title from "./Title/Title.astro";
           </div>
         </div>
       </div>
-      <!-- Image Column -->
-      <div class="image-column order-1 relative">
-        <div class="inner-column">
-          <figure class="image-1">
-            <Image
-              width="600"
-              height="580"
-              src="https://ankasafi.pe/wp-content/uploads/2022/08/Contacto-Anka-Safi-Form.jpeg"
-              alt="Imagen"
-              class="h-[480px] w-[65%]"
-              draggable="false"
-              loading="eager"
-            />
-          </figure>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .about-section {
-    position: relative;
-    padding: 120px 0 70px;
-  }
 
   .about-section .image-column .inner-column {
     position: relative;
