@@ -7,7 +7,7 @@ const { src, alt, text } = Astro.props;
   <div class="app-content-slide w-full flex text-white absolute left-[50%] top-[20%] md:top-[50%] lg:md:sm:top-[38%]">
     <div class="container mx-auto flex flex-col flex-nowrap items-start px-5 lg:md:sm:p-0">
       <h1
-        class="title-slide text-white text-3xl text-left font-bold uppercase md:text-5xl lg:md:sm:text-7xl lg:md:sm:mb-5"
+        class="text-white text-3xl text-left font-bold uppercase md:text-5xl lg:md:sm:text-7xl lg:md:sm:mb-5"
       >
         {text}
       </h1>
@@ -17,8 +17,6 @@ const { src, alt, text } = Astro.props;
 <style>
     .app-content-slide {
     transform: translate(-50%, -50%);
-    z-index: 10;
-
   }
   .swiper-slide {
     text-align: center;
