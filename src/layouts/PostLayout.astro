@@ -57,7 +57,7 @@ const hasImage =
     alt={frontmatter.alt}
     text={frontmatter.title}
   />
-  <section class="container mx-auto flex flex-col my-8">
+  <section class="container mx-5 lg:md:sm:mx-auto w-fit flex flex-col my-8">
     {
       hasContent1 && (
         <>
@@ -87,7 +87,7 @@ const hasImage =
       hasContent3 && (
         <>
           <Title title={frontmatter.subtitle3} />
-          <p class="mb-8 leading-7 text-[#848484]">{frontmatter.content3}</p>
+          <p class="mb-1 leading-7 text-[#848484]">{frontmatter.content3}</p>
         </>
       )
     }
