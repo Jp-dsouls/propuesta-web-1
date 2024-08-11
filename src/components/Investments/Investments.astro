@@ -3,7 +3,7 @@ import Title from "../Title/Title.astro";
 import { Image } from "astro:assets";
 ---
 
-<section class="container mx-auto flex flex-col my-8">
+<section class="container mx-5 w-fit lg:md:sm:mx-auto flex flex-col my-8">
   <Title title="Inversiones" />
   <h2 class="text-lg font-semibold">
     Yaku Fondo de Inversión Factoring, Confirming y Descuento
@@ -39,19 +39,19 @@ import { Image } from "astro:assets";
         <thead>
           <tr class="bg-muted">
             <th class="px-4 py-3 font-medium"></th>
-            <th class="px-4 py-3 font-medium">
+            <th class="px-4 py-3 text-sm lg:md:sm:font-medium">
               <span>Fondo Soles</span>
-              <h5 class="text-[#a186dc] text-2xl font-bold">PEN</h5>
+              <h5 class="text-[#a186dc] text-lg lg:md:sm:text-2xl font-bold">PEN</h5>
             </th>
-            <th class="px-4 py-3 font-medium">
+            <th class="px-4 py-3 text-sm lg:md:sm:font-medium">
               <span>Fondo Dolares</span>
-              <h5 class="text-[#a186dc] text-2xl font-bold">USD</h5>
+              <h5 class="text-[#a186dc] text-lg lg:md:sm:text-2xl font-bold">USD</h5>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
             src="/icons/inscripcion.png"
             alt="icono inscripcion"
@@ -59,7 +59,7 @@ import { Image } from "astro:assets";
             height="24"
             draggable="false"
             loading="lazy"
-            class="pr-3"
+            class="pr-3 hidden sm:block lg:md:sm:block"
           />
               Inscripcion en el Registro Público del Mercado de Valores
             </td>
@@ -67,7 +67,7 @@ import { Image } from "astro:assets";
             <td class="px-4 py-3">✔</td>
           </tr>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
             src="/icons/ley.png"
             alt="icono ley"
@@ -75,15 +75,15 @@ import { Image } from "astro:assets";
             height="24"
             draggable="false"
             loading="lazy"
-            class="pr-3"
+            class="pr-3 hidden sm:block lg:md:sm:block"
           />
               Resolucion que lo respalda</td
             >
-            <td class="px-4 py-3">Resolución N° 144-2022-SMV/10.2</td>
-            <td class="px-4 py-3">Resolución N° 143-2022-SMV/10.2</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">Resolución N° 144-2022-SMV/10.2</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">Resolución N° 143-2022-SMV/10.2</td>
           </tr>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
             src="/icons/dinero.png"
             alt="icono dinero"
@@ -91,15 +91,15 @@ import { Image } from "astro:assets";
             height="24"
             draggable="false"
             loading="lazy"
-            class="pr-3"
+            class="pr-3 hidden sm:block lg:md:sm:block"
           />
               Monto
             </td>
-            <td class="px-4 py-3">Hasta S/ 100,000,000.00</td>
-            <td class="px-4 py-3">Hasta $100,000,000.00</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">Hasta S/ 100,000,000.00</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">Hasta $100,000,000.00</td>
           </tr>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
               src="/icons/calendario.png"
               alt="icono calendario"
@@ -107,16 +107,16 @@ import { Image } from "astro:assets";
               height="22"
               draggable="false"
               loading="lazy"
-              class="pr-3"
+              class="pr-3 hidden sm:block lg:md:sm:block"
             />
 
               Plazo
             </td>
-            <td class="px-4 py-3">indeterminado</td>
-            <td class="px-4 py-3">indeterminado</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">indeterminado</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">indeterminado</td>
           </tr>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
               src="/icons/inversion.png"
               alt="icono inversion"
@@ -124,15 +124,15 @@ import { Image } from "astro:assets";
               height="24"
               draggable="false"
               loading="lazy"
-              class="pr-3"
+              class="pr-3 hidden sm:block lg:md:sm:block"
             />
               Monto de inversión sugerido
             </td>
-            <td class="px-4 py-3">S/ 5000.00</td>
-            <td class="px-4 py-3">$5000.00</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">S/ 5000.00</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">$5000.00</td>
           </tr>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
               src="/icons/comision.png"
               alt="icono comision"
@@ -140,15 +140,15 @@ import { Image } from "astro:assets";
               height="24"
               draggable="false"
               loading="lazy"
-              class="pr-3"
+              class="pr-3 hidden sm:block lg:md:sm:block"
             />
               Comisión de administración</td
             >
-            <td class="px-4 py-3">2% anual</td>
-            <td class="px-4 py-3">2% anual</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">2% anual</td>
+            <td class="px-4 py-3 text-xs lg:md:sm:text-base">2% anual</td>
           </tr>
           <tr class="border-b">
-            <td class="px-4 py-3 font-medium inline-flex">
+            <td class="px-4 py-3 font-medium inline-flex text-xs lg:md:sm:text-sm">
               <Image
               src="/icons/reglamento.png"
               alt="icono reglamento"
@@ -156,7 +156,7 @@ import { Image } from "astro:assets";
               height="24"
               draggable="false"
               loading="lazy"
-              class="pr-3"
+              class="pr-3 hidden sm:block lg:md:sm:block"
             />
               Reglamento de participacion</td
             >
